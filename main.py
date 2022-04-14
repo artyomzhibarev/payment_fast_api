@@ -14,7 +14,9 @@ app.add_middleware(
 )
 
 
-@app.get("/products")
+# Products stuff:
+
+@app.get('/products')
 async def get_products():
     return [get_product_object(pk=pk) for pk in Product.all_pks()]
 
